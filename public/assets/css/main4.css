@@ -1,0 +1,415 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* متغيرات الألوان */
+:root {
+  --primary-color: #2a6f6f;
+  --secondary-color: #f7b733;
+  --accent-color: #4a919e;
+  --light-color: #f5f5f5;
+  --dark-color: #2c3e50;
+  --text-color: #444;
+}
+
+/* الترويسة */
+.banner {
+  height: 50vh;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.banner-content {
+  max-width: 500px;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease;
+  background:linear-gradient(to bottom,#a8e6a3, #2e7d32) ;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.banner{
+  background:linear-gradient(to bottom,#b4dfb1, #064b09);
+}
+.banner p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+
+  margin-top: 5rem;
+}
+
+.btn-action {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  padding: 12px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+
+
+.navbar-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.brand-logo span {
+  color: var(--secondary-color);
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+}
+
+.menu-links li {
+  margin-right: 20px;
+}
+
+.menu-links a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-links a:hover,
+.menu-links a.current {
+  color: var(--secondary-color);
+}
+
+/* المحتوى الرئيسي */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-header h2 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* قسم الحدائق */
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.park-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.park-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.park-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.park-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.park-card:hover .park-image img {
+  transform: scale(1.1);
+}
+
+.park-info {
+  padding: 1.5rem;
+}
+
+.park-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.park-info p {
+  color: var(--text-color);
+  margin-bottom: 1.2rem;
+}
+
+.park-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* أزرار التعديل والحذف */
+.park-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.btn-small {
+  padding: 6px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-danger {
+  background-color: #c0392b;
+  color: white;
+  border: 2px solid #c0392b;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: transparent;
+  color: #c0392b;
+}
+
+/* قسم المميزات */
+.advantages-area {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.advantages-area .section-header h2 {
+  color: white;
+}
+
+.advantages-area .section-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.advantage-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.advantage-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.advantage-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.advantage-card p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* قسم معرض الصور */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.photo-item {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 15px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.photo-item:hover .photo-caption {
+  opacity: 1;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تأثيرات للهواتف */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    font-size: 1.1rem;
+  }
+
+  .navbar-wrapper {
+    flex-direction: column;
+  }
+
+  .brand-logo {
+    margin-bottom: 1rem;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-links li {
+    margin: 0 10px 5px;
+  }
+
+  .parks-grid,
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}

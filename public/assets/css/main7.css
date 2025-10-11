@@ -1,0 +1,398 @@
+.hotel-banner {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1501117716987-c8b8f3f7be44?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center center;
+  height: 320px;
+  border-radius: 16px;
+  margin: 30px 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  background: rgba(20, 20, 20, 0.65);
+  padding: 30px 50px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 700px;
+  color: #f9d342; /* ذهبي أنيق */
+  box-shadow: 0 0 20px #f9d342cc;
+}
+
+.hotel-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 12px #f9d342cc;
+}
+
+.hotel-banner p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 6px #f9d342aa;
+}
+
+.banner-btn {
+  background: linear-gradient(45deg, #f9d342, #cba135);
+  color: #222;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #cba135cc;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner-btn:hover {
+  background: linear-gradient(45deg, #cba135, #f9d342);
+  box-shadow: 0 8px 25px #f9d342cc;
+}
+  .main-title {
+  font-family: 'Georgia', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #f7f7ee; /* لون ذهبي فاخر */
+  text-align: center;
+  margin: 40px 0 30px;
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+}
+  .hotel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .hotel-card {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+    height: 500px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    flex-basis: calc(30% - 10px);
+  }
+
+  .hotel-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    z-index: 0;
+  }
+
+  .hotel-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hotel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  }
+
+  .hotel-rating {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffc107cc;
+    color: #222;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .hotel-location {
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  }
+
+  .hotel-card h2 {
+    color: #cba135;
+    margin: 0 0 6px;
+    font-size: 1.8em;
+    font-weight: 900;
+    text-shadow: 0 0 8px rgba(19, 18, 18, 0.8);
+  }
+
+  .hotel-card p {
+    font-size: 1em;
+    max-height: 60px;
+    overflow: hidden;
+    text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  }
+
+  .hotel-features {
+    margin-top: 10px;
+  }
+
+  .feature {
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 6px;
+    display: inline-block;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+  }
+
+  .details-btn {
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: none;
+    background-color: #007bffcc;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    align-self: flex-start;
+    box-shadow: 0 3px 8px rgba(0,123,255,0.7);
+    transition: background-color 0.3s ease;
+  }
+
+  .details-btn:hover {
+    background-color: #0056b3cc;
+  }
+
+  .mall-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn-sm {
+    padding: 6px 14px;
+    font-size: 0.85em;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .btn-danger {
+    background-color: #dc3545cc;
+    color: white;
+    box-shadow: 0 3px 8px rgba(220,53,69,0.7);
+  }
+
+  .btn-danger:hover {
+    background-color: #b02a37cc;
+  }
+
+  .btn-warning {
+    background-color: #ffc107cc;
+    color: #212529;
+    box-shadow: 0 3px 8px rgba(255,193,7,0.7);
+  }
+
+  .btn-warning:hover {
+    background-color: #d39e00cc;
+  }
+
+  @media (max-width: 900px) {
+    .mall-card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .mall-card {
+      flex-basis: 100%;
+      height: 280px;
+    }
+  }
+
+  /* مودال */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .modal-content {
+    position: relative;
+    margin: 3% auto;
+    padding: 20px 30px 40px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+  }
+
+  .mySlides {
+    max-height: 450px;
+    display: none;
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .modal-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    border: 3px solid #ffd700;
+    margin-bottom: 5px;
+  }
+
+  .modal-info {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #ffd700;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  }
+
+  .modal-gallery {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .modal-thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    transition: opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px transparent;
+    flex-shrink: 0;
+  }
+
+  .modal-thumbnail:hover {
+    opacity: 1;
+    border-color: #ffd700;
+    box-shadow: 0 0 12px #ffd700;
+  }
+
+  .modal-thumbnail.active {
+    opacity: 1;
+    border-color: #ffd700;
+    box-shadow: 0 0 16px #ffd700;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    padding: 0;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #ffd700;
+    z-index: 1001;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px #ffd700;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffd700;
+    cursor: pointer;
+    text-shadow: 0 0 8px #ffd700;
+    transition: color 0.3s ease;
+    z-index: 1001;
+  }
+
+  .close:hover {
+    color: #fff;
+  }
+
+  .modal-gallery::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .modal-gallery::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .modal-gallery::-webkit-scrollbar-thumb {
+    background-color: #ffd700cc;
+    border-radius: 3px;
+  }

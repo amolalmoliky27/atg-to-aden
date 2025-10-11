@@ -1,0 +1,587 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color:white;
+  color: #004d66; /* أزرق غامق */
+  line-height: 1.8;
+}
+
+/* متغيرات الألوان */
+:root {
+  --sea-primary: #008080;       /* فيروزي */
+  --sea-secondary: #00b8d4;     /* أزرق سماوي */
+  --sea-accent: #005f73;        /* أزرق داكن */
+  --sea-light: #ffffff;          /* أبيض */
+  --sea-dark: #003344;           /* أزرق غامق جدًا */
+  --sea-text: #064663;           /* أزرق متوسط */
+}
+
+.sea-banner {
+  position: relative;
+  height: 50vh;
+  min-height: 200px;
+  background: linear-gradient(
+      rgba(0, 128, 153, 0.6),
+      rgba(0, 77, 102, 0.6)
+    ),
+    url('your-banner-image.jpg') no-repeat center center / cover;
+  color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Tajawal', sans-serif;
+  box-shadow: inset 0 0 80px rgba(0, 77, 102, 0.7);
+  animation: fadeIn 1.5s ease;
+  user-select: none;
+}
+
+.sea-banner h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 51, 68, 0.9);
+  margin-bottom: 1.2rem;
+}
+
+.sea-banner p {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(224, 247, 250, 0.8);
+}
+
+.sea-banner .sea-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #26c6da, #00acc1);
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 172, 193, 0.6);
+  transition: all 0.3s ease;
+  border: 2px solid #00acc1;
+}
+
+.sea-banner .sea-btn:hover {
+  background: transparent;
+  color: #00acc1;
+  box-shadow: 0 8px 20px rgba(0, 172, 193, 0.9);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .sea-banner h1 {
+    font-size: 2.8rem;
+  }
+  .sea-banner p {
+    font-size: 1rem;
+    max-width: 90%;
+    padding: 0.8rem 1.5rem;
+  }
+  .sea-banner .sea-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* أزرار */
+.sea-btn {
+  display: inline-block;
+  background-color:#e0f7fa;
+  color: var(--sea-light);
+  padding: 12px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--sea-secondary);
+  box-shadow: 0 5px 15px rgba(89, 94, 95, 0.3);
+  cursor: pointer;
+}
+
+.sea-btn:hover {
+  background-color: transparent;
+  color: var(--sea-secondary);
+  transform: translateY(-3px);
+}
+
+/* التنقل */
+.sea-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--sea-light);
+  box-shadow: 0 4px 12px rgba(91, 95, 95, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.sea-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sea-primary);
+  text-decoration: none;
+}
+
+.sea-logo span {
+  color:goldenrod;
+}
+
+.sea-nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.sea-nav-links li {
+  margin-right: 20px;
+}
+
+.sea-nav-links a {
+  color: var(--sea-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sea-nav-links a:hover,
+.sea-nav-links a.sea-active {
+  color: var(--sea-light);
+  background-color: var(--sea-primary);
+  box-shadow: 0 2px 8px rgba(87, 88, 88, 0.5);
+}
+
+/* بورجر موبايل */
+.sea-burger {
+  display: none;
+  cursor: pointer;
+  color: goldenrod;
+}
+
+.sea-burger.sea-toggle {
+  color: var(--sea-secondary);
+}
+
+/* المحتوى الرئيسي */
+.sea-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sea-section {
+  padding: 5rem 0;
+}
+
+.sea-section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color:goldenrod;
+}
+
+.sea-section-title h2 {
+  font-size: 2.3rem;
+  color:goldenrod;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sea-section-title p {
+  color: var(--sea-text);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.sea-section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* قسم الشواطئ */
+.sea-gardens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* بطاقة شاطئ */
+.sea-sea-card {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(37, 36, 36, 0.356);
+    transition: all 0.4s ease;
+}
+
+.sea-sea-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.sea-sea-img {
+    flex: 9;
+    overflow: hidden;
+}
+
+.sea-sea-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.sea-sea-card:hover .sea-sea-img img {
+    transform: scale(1.1);
+}
+
+.sea-sea-info {
+    flex: 1;
+    padding: 0.5rem 1rem; /* تقليل الحشو */
+    background-color: white;
+}
+
+.sea-sea-info h3 {
+    color:#003344;
+    margin-bottom: 0.4rem; /* تقليل المسافة تحت العنوان */
+    font-size: 1.4rem;
+}
+
+.sea-sea-info p {
+    color: var(--sea-text);
+    margin-bottom: 0.6rem; /* تقليل المسافة تحت النص */
+}
+
+.sea-sea-meta {
+    display: flex;
+    justify-content: space-between;
+    color:#131718;
+    font-weight: 600;
+  
+}
+
+/* أزرار تعديل وحذف */
+.sea-sea-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.sea-sea-edit-btn {
+    background-color: #215fe6; 
+  color: #fff;
+  
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.sea-sea-delete-btn {
+   background-color: #b33939;
+  color:white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+
+/* قسم المميزات */
+.sea-features {
+  background-color: #aed6e6a8;
+  color: white;
+  padding: 3rem 0;
+  border-radius: 15px;
+  margin-top: 5rem;
+}
+
+.sea-features .sea-section-title h2 {
+  color:goldenrod;
+}
+
+.sea-features .sea-section-title p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sea-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 20px;
+}
+
+.sea-feature-card {
+  text-align: center;
+  padding: 2rem;
+  background-color:rgba(44, 188, 231, 0.644);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(246, 251, 252, 0.3);
+}
+
+.sea-feature-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sea-feature-icon {
+  font-size: 2.5rem;
+  color: var(--sea-light);
+  margin-bottom: 1.5rem;
+}
+
+.sea-feature-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.sea-feature-card p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* معرض الصور */
+.sea-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 20px;
+}
+
+.sea-gallery-item {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3);
+  transition: box-shadow 0.3s ease;
+  background-color: var(--sea-light);
+}
+
+.sea-gallery-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 184, 212, 0.5);
+}
+
+.sea-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+.sea-gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.85);
+}
+
+.sea-gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 128, 128, 0.85));
+  color: var(--sea-light);
+  padding: 15px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.sea-gallery-item:hover .sea-gallery-caption {
+  opacity: 1;
+}
+
+/* التذييل */
+.sea-footer {
+  background-color: var(--sea-dark);
+  color: var(--sea-light);
+  padding: 4rem 0 2rem;
+}
+
+.sea-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sea-footer-column h3 {
+  color: var(--sea-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.sea-footer-column h3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--sea-secondary);
+  bottom: 0;
+  right: 0;
+  border-radius: 2px;
+}
+
+.sea-footer-column p {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.sea-footer-links {
+  list-style: none;
+}
+
+.sea-footer-links li {
+  margin-bottom: 10px;
+}
+
+.sea-footer-links a {
+  color: var(--sea-light);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.sea-footer-links a:hover {
+  opacity: 1;
+  color: var(--sea-secondary);
+  padding-right: 5px;
+}
+
+.sea-social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.sea-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--sea-light);
+  transition: all 0.3s ease;
+}
+
+.sea-social-links a:hover {
+  background-color: var(--sea-secondary);
+  color: var(--sea-dark);
+  transform: translateY(-3px);
+}
+
+.sea-copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تأثيرات للهواتف */
+@media (max-width: 768px) {
+  .sea-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .sea-hero p {
+    font-size: 1.1rem;
+  }
+
+  .sea-nav-container {
+    flex-direction: column;
+  }
+
+  .sea-logo {
+    margin-bottom: 1rem;
+  }
+
+  .sea-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sea-nav-links li {
+    margin: 0 10px 5px;
+  }
+
+  .sea-gardens-grid,
+  .sea-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .sea-section {
+    padding: 3rem 0;
+  }
+
+  .sea-burger {
+    display: block;
+  }
+}

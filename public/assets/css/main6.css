@@ -1,0 +1,412 @@
+
+/* ======== الخط العام ======== */
+body {    
+    font-family: 'Tajawal', sans-serif;    
+    background: #f5f6fa;    
+    margin: 0;    
+    padding: 0;    
+    color: #34495e;
+} 
+
+/* ======== العنوان الرئيسي ======== */
+ .malls-banner {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center center;
+    height: 360px;
+    border-radius: 24px;
+    margin: 40px 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .malls-banner-overlay {
+    background: rgba(104, 174, 221, 0.75);
+    padding: 40px 60px;
+    border-radius: 24px;
+    max-width: 720px;
+    text-align: center;
+    color: #fcfbf9f6; /* ذهبي فاخر */
+    box-shadow: 0 0 30px #a4a5a8cc;
+  }
+
+  .malls-banner h1 {
+    font-size: 3.8rem;
+    margin-bottom: 16px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    text-shadow: 0 0 15px #6d82f8cc;
+    user-select: none;
+  }
+
+  .malls-banner p {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 10px #7f8cdabb;
+  }
+
+  .malls-banner-btn {
+    background: linear-gradient(135deg, #697dbe, #372c9c);
+    color: #2a1a00;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 14px 48px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px #96a2e5cc;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    user-select: none;
+  }
+
+  .malls-banner-btn:hover {
+    background: linear-gradient(135deg, #98b6e2, #6c91d6);
+    box-shadow: 0 12px 40px #9bacf8dd;
+  }
+
+  @media (max-width: 768px) {
+    .malls-banner {
+      height: 280px;
+      margin: 30px 10px;
+    }
+    .malls-banner-overlay {
+      padding: 30px 20px;
+      max-width: 90%;
+    }
+    .malls-banner h1 {
+      font-size: 2.6rem;
+    }
+    .malls-banner p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .malls-banner-btn {
+      padding: 12px 36px;
+      font-size: 1rem;
+    }
+  }
+
+
+.section-main-titel {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #2c3e50; /* أزرق داكن أنيق */
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  margin: 40px 0 30px;
+  user-select: none;
+}
+
+.section-main-titel::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #f5c518, #c6a310);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #f5c518aa;
+}
+
+@media (max-width: 768px) {
+  .section-main-titel {
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+    margin: 30px 0 20px;
+  }
+  .section-main-titel::after {
+    width: 80px;
+    height: 3px;
+  }
+}
+
+/* ======== حاوية الكروت ======== */
+.shops-wrapper {    
+    display: flex;    
+    flex-wrap: wrap;    
+    justify-content: center;    
+    gap: 30px;    
+    padding: 0 20px 50px;
+} 
+
+/* ======== تصميم بطاقة المول ======== */
+.shop-card {    
+    position: relative;    
+    border-radius: 16px;    
+    overflow: hidden;    
+    width: 320px;    
+    background: #fff;    
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);    
+    transition: transform 0.25s ease, box-shadow 0.25s ease;    
+    display: flex;    
+    flex-direction: column;
+} 
+
+.shop-card:hover {    
+    transform: translateY(-8px);    
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+} 
+
+/* ======== صورة المول ======== */
+.shop-thumb {    
+    width: 100%;    
+    height: 280px;    
+    object-fit: cover;    
+    transition: transform 0.4s ease;    
+    cursor: pointer;
+} 
+
+.shop-card:hover .shop-thumb {    
+    transform: scale(1.05);
+} 
+
+/* ======== أزرار التعديل والحذف ======== */
+.shop-card form, .shop-card a.btn-warning-action {    
+    position: absolute;    
+    top: 12px;    
+    padding: 6px 12px;    
+    font-size: 0.85rem;    
+    border-radius: 8px;    
+    font-weight: 600;    
+    cursor: pointer;    
+    transition: background-color 0.3s ease;    
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);    
+    user-select: none;    
+    text-decoration: none;    
+    color: #fff;
+} 
+
+.shop-card form {    
+    right: 12px;    
+    background-color: #e74c3c;    
+    border: none;    
+    display: flex;    
+    align-items: center;    
+    justify-content: center;    
+    height: 34px;
+} 
+
+.shop-card form:hover {    
+    background-color: #c0392b;
+} 
+
+.shop-card a.btn-warning-action {    
+    left: 12px;    
+    background-color: #f39c12;    
+    height: 34px;    
+    line-height: 22px;    
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+} 
+
+.shop-card a.btn-warning-action:hover {    
+    background-color: #d68910;
+} 
+
+/* ======== محتوى البطاقة (العنوان والوصف) ======== */
+.shop-title {    
+    font-size: 1.5rem;    
+    margin: 18px 20px 10px;    
+    color: #2c3e50;    
+    font-weight: 700;    
+    min-height: 48px; /* لثبات الارتفاع حتى لا تتحرك الكروت */
+} 
+
+.shop-description {    
+    margin: 0 20px 20px;    
+    color: #555;    
+    font-size: 1rem;    
+    line-height: 1.5;    
+    flex-grow: 1;
+} 
+
+/* ======== زر عرض التفاصيل ======== */
+.details-button {    
+    display: inline-block;    
+    margin: 0 20px 22px;    
+    padding: 10px 22px;    
+    background: #3498db;    
+    color: #fff;    
+    font-weight: 600;    
+    text-align: center;    
+    border-radius: 10px;    
+    transition: background 0.3s ease;    
+    cursor: pointer;    
+    user-select: none;    
+    box-shadow: 0 5px 12px rgba(52, 152, 219, 0.3);    
+    text-decoration: none;
+} 
+
+.details-button:hover {    
+    background: #217dbb;
+} 
+
+/* ======== تصميم النافذة المنبثقة (المعرض) ======== */
+.modal-window {    
+    display: none;    
+    position: fixed;    
+    z-index: 1100;    
+    padding-top: 60px;    
+    left: 0;    
+    top: 0;    
+    width: 100%;    
+    height: 100%;    
+    overflow: auto;    
+    background: rgba(0, 0, 0, 0.9);
+} 
+
+.modal-inner-content {    
+    background: #fff;    
+    margin: auto;    
+    padding: 25px 30px 30px;    
+    border-radius: 20px;    
+    width: 90%;    
+    max-width: 1000px;    
+    position: relative;    
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+} 
+
+
+.modal-close {    
+    color: #aaa;    
+    position: absolute;    
+    top: 22px;    
+    right: 30px;    
+    font-size: 32px;    
+    font-weight: 700;    
+    cursor: pointer;    
+    transition: color 0.3s ease;    
+    user-select: none;
+} 
+
+.modal-close:hover {    
+    color: #e74c3c;
+}
+
+/* أزرار التنقل المعرض */
+.slide-prev, .slide-next {    
+    cursor: pointer;    
+    position: absolute;    
+    top: 50%;    
+    padding: 16px;    
+    margin-top: -28px;    
+    color: #fff;    
+    font-weight: 700;    
+    font-size: 30px;    
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);    
+    border-radius: 50%;    
+    user-select: none;    
+    transition: background 0.3s ease, box-shadow 0.3s ease;    
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.6);    
+    border: 2px solid #fff;    
+    z-index: 1200;
+} 
+
+.slide-prev:hover, .slide-next:hover {    
+    background: linear-gradient(135deg, #2980b9 0%, #1c5980 100%);    
+    box-shadow: 0 8px 25px rgba(41, 128, 185, 0.9);    
+    border-color: #f1c40f;
+} 
+
+.slide-prev {    
+    left: 15px;
+} 
+
+.slide-next {    
+    right: 15px;
+} 
+
+/* تحسين تصميم المعرض الداخلي */
+.modal-inner-content {    
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
+    padding: 30px 35px 35px;    
+    background: #fff;    
+    margin: auto;    
+    border-radius: 20px;    
+    max-width: 900px;    
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);    
+    position: relative;
+} 
+
+/* الشريحة المعروضة */
+.slide-item img {    
+    border-radius: 12px;    
+    max-height: 520px;    
+    width: 100%;    
+    object-fit: cover;    
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+} 
+
+/* معرض الصور المصغرة */
+.modal-gallery {    
+    margin-top: 25px;    
+    display: flex;    
+    justify-content: center;    
+    gap: 14px;    
+    overflow-x: auto;    
+    padding-bottom: 10px;    
+    scrollbar-width: thin;    
+    scrollbar-color: #3498db transparent;
+} 
+
+/* تحسين مظهر السكروولبار في فايرفوكس */
+.modal-gallery::-webkit-scrollbar {    
+    height: 8px;
+} 
+
+.modal-gallery::-webkit-scrollbar-thumb {    
+    background-color: #3498db;    
+    border-radius: 10px;
+}   
+
+.modal-thumbnail:hover, .modal-thumbnail.active {    
+    transform: scale(1.1);    
+    border-color: #3498db;
+} 
+
+/* زر الإغلاق */
+.modal-close {    
+    color: #555;    
+    position: absolute;    
+    top: 18px;    
+    right: 25px;    
+    font-size: 34px;    
+    font-weight: 700;    
+    cursor: pointer;    
+    transition: color 0.3s ease;    
+    user-select: none;    
+    z-index: 1300;
+} 
+
+.modal-close:hover {    
+    color: #e74c3c;
+} 
+
+/* استجابة الجهاز */
+@media (max-width: 768px) {    
+    .slide-prev, .slide-next {        
+        font-size: 26px;        
+        padding: 14px;        
+        left: 10px;        
+        right: 10px;    
+    }    
+    .modal-thumbnail {        
+        width: 90px;        
+        height: 60px;    
+    }    
+    .modal-gallery {        
+        gap: 10px;    
+    }
+}
