@@ -146,7 +146,7 @@
       </div>
 
       <div class="image-gallery">
-        @foreach(json_decode($place->images) as $image)
+        @foreach(($place->images) as $image)
           <img src="{{ asset('images/'.$image) }}" alt="{{$place->name}}" />
         @endforeach
       </div>
