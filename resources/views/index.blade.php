@@ -138,8 +138,8 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>تصفح</h2>
-   <p><span>قم بزيارة المدينة </span> <span class="description-title">واستمتع</span></p>
+   
+   <p><span>web</span> <span class="description-title">pioneer</span></p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -176,14 +176,14 @@
         }
       </script>
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="resturent.html"><img src="imgggg/مطعم2.jpeg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="hotel.html"><img src="imgggg/صفحة فندق.jpeg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="sea.html"><img src="imgggg/بحر1.jpeg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="mol.html"><img src="imgggg/مول.jpeg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="history.html"><img src="img/1744813279073.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="trans.html"><img src="img/IMG-20250406-WA0031.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/enas.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/yosra.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/manal.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/nadia.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/manar.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/jehan.jpg" class="img-fluid" alt=""></a></div>
        
-        <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="park.html"><img src="imgggg/واجهة 1.jpeg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="imgggg/ahdab.jpg" class="img-fluid" alt=""></a></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
