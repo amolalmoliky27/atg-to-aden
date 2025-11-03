@@ -176,14 +176,14 @@
         }
       </script>
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="imgggg/enas.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="imgggg/yosra.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="imgggg/manal.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="imgggg/nadia.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="imgggg/manar.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="imgggg/jehan.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/enas.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/yosra.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/manal.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/nadia.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/manar.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/jehan.jpg" class="img-fluid" alt=""></a></div>
        
-        <div class="swiper-slide"><img src="imgggg/ahdab.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/ahdab.jpg" class="img-fluid" alt=""></a></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
