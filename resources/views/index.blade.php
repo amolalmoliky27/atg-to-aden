@@ -176,11 +176,11 @@
         }
       </script>
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="img/enas.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/enas.png" class="img-fluid" alt=""></a></div>
         <div class="swiper-slide"><img src="img/yosra.jpg" class="img-fluid" alt=""></a></div>
         <div class="swiper-slide"><img src="img/manal.jpg" class="img-fluid" alt=""></a></div>
         <div class="swiper-slide"><img src="img/nadia.jpg" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="img/manar.jpg" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="img/manar.png" class="img-fluid" alt=""></a></div>
         <div class="swiper-slide"><img src="img/jehan.jpg" class="img-fluid" alt=""></a></div>
        
         <div class="swiper-slide"><img src="img/ahdab.jpg" class="img-fluid" alt=""></a></div>
